@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+
+  <ion-header collapse="fade">
+    <ion-toolbar>
+      <ion-title>SERVICE FINDER</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card class="center" color="dark">
+    <ion-card-title class="ion-text-center">Login</ion-card-title>
+
+    <ion-item  lines="none" color="dark">
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="email" class="input" placeholder="Digite o seu email..." value="admin@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" color="dark">
+      <ion-label position="stacked">Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha" class="input" placeholder="Digite a senha..." value="admin"></ion-input>
+    </ion-item>
+
+    <ion-button color="light" fill="clear" expand="full" shape="round" size="small" class="botao ion-justify-content-center botao"
+              (click)="login()">
+      ENTRAR
+    </ion-button>
+    <ion-button color="light" fill="clear" expand="full" shape="round" size="small" class="botao ion-justify-content-center botao"
+              (click)="registrar()">
+      REGISTRAR
+    </ion-button>
+  </ion-card>
+
+</ion-content>
