@@ -1,20 +1,118 @@
-<ion-header [translucent]="true">
+<ion-header collapse="fade">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <div class="menu">
+      <img class="logo" src="../assets/img/logo-service-finder.png"> 
+    </div>
+    <ion-title></ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="border">
+
+    <div class="centerImage">
+      <img class="image" src="../assets/img/menu-imagem1.png"> 
+    </div>
+
+    <ion-label class="topics" >
+      Precisa de ajuda com algo ? Nós estamos aqui para isso!
+    </ion-label>
+
+      <ion-list class="borderList">
+
+        <ion-label class="borderText">Busque o que precisa:</ion-label>
+
+        <ion-item lines="none">         
+          <ion-select placeholder="Categoria">
+            <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
+            <ion-select-option value="eletricista">Eletricista</ion-select-option>
+            <ion-select-option value="encanador">Encanador</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-label class="borderText">Onde quiser:</ion-label>
+        
+        <ion-item  lines="none">
+          <ion-range></ion-range>
+        </ion-item>
+
+        <div style="text-align:center" >
+          <ion-button class="searchButton" > Buscar</ion-button>
+        </div>
+        
+      </ion-list>   
   </div>
+  
+  <div class="border backgroundGray">
+
+    <div class="centerImage">
+      <img class="image" src="../assets/img/menu-imagem2.png"> 
+    </div>
+  
+    <ion-label class="topics" >
+      Quer encontrar o melhor preço?
+    </ion-label>
+  
+      <ion-list class="borderList backgroundGray">
+  
+        <ion-label class="borderText">Busque o que precisa:</ion-label>
+  
+        <ion-item class="backgroundGray" lines="none">         
+          <ion-select placeholder="Categoria">
+            <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
+            <ion-select-option value="eletricista">Eletricista</ion-select-option>
+            <ion-select-option value="encanador">Encanador</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-label class="borderText">Onde quiser:</ion-label>
+        
+        <ion-item  lines="none">
+          <ion-range></ion-range>
+        </ion-item>
+
+        <div style="text-align:center" >
+          <ion-button class="requestBudgetButton"> Pedir orçamento</ion-button>
+        </div>
+  
+      </ion-list>   
+
+  </div>
+
+  <div class="border">
+
+    <div class="centerImage">
+      <img class="image" src="../assets/img/menu-imagem3.png"> 
+    </div>
+  
+    <ion-label class="topics" >
+      Procurando trabalho ?
+    </ion-label>
+
+    <ion-label>
+        <p>Encontre pessoas que precisam de suas habilidades:</p>
+    </ion-label>
+  
+      <ion-list class="borderList">
+  
+        <ion-label class="borderText">Você faz:</ion-label>
+  
+        <ion-item lines="none">         
+          <ion-select placeholder="Categoria">
+            <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
+            <ion-select-option value="eletricista">Eletricista</ion-select-option>
+            <ion-select-option value="encanador">Encanador</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <div style="text-align:center" >
+          <ion-button class="searchButton"> Buscar</ion-button>
+        </div>
+  
+      </ion-list>   
+
+  </div>
+  
 </ion-content>
