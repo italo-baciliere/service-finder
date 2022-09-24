@@ -1,0 +1,38 @@
+ion-item{
+
+  ion-thumbnail {
+    --size: 80px;
+    --border-radius: 20px;
+  }
+
+  h1{
+    font-weight: bold;
+    font-size: 0.8rem;
+    --ion-margin-vertical: 3px;
+  }
+
+  p{
+    font-size: 0.6rem;
+    --ion-margin-vertical: 3px;
+  }
+  .link{
+    --color: var(--ion-color-primary);
+    font-weight: bold
+  }
+
+  ion-chip{
+    padding-inline: 5px;
+    // --background: var(--ion-color-primary);
+    background: rgba(#f1f2ff, 0.08);
+    color: #4854e0;
+    border-color: #4854e0;
+  }
+
+  ion-badge{
+    font-weight: 300;
+    font-size: 0.6rem;
+    margin-right: 2px;
+    --background: rgb(243, 243, 243);
+    --color: var(--ion-color-primary);
+  }
+}
