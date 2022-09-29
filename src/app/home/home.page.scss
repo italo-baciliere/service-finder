@@ -68,7 +68,7 @@ ion-select{
   border-radius: 30px;
   border-style: solid;
   border-color: #5065A8;
-  border-width: 2px;
+  border-width: 1px;
   width: 310px;
   height: 30px;
   padding-left: 8px;
@@ -87,7 +87,7 @@ ion-range{
   height: 20px;
   --ion-color-primary:#ffffff !important;
   --ion-color-primary-contrast: #5065A8 !important;
-  --ion-color-primary-tint: black !important;
+  --ion-color-primary-tint: #b7c0df !important;
 }
 
 .requestBudgetButton{
