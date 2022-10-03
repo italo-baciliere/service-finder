@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { Usuario } from './usuario';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,21 +14,24 @@ export class LoginPage implements OnInit {
 
   email: string;
   senha: string;
+  usuario: Usuario = new Usuario();
 
-  constructor(private toastController: ToastController, private router: Router) {
-    this.email =  'admin@gmail.com';
-    this.senha = 'admin';
+  constructor(private toastController: ToastController, private router: Router, private authService: AuthService) {
+    // this.email =  'admin@gmail.com';
+    // this.senha = 'admin';
   }
 
   ngOnInit() {}
 
   login(){
-    if(this.email === 'admin@gmail.com' && this.senha === 'admin'){
-      this.router.navigateByUrl('/register');
-      this.presentToast('Seja bem vindo', 'success');
-    } else {
-      this.presentToast('Usuário e senha incorretos', 'danger');
-    }
+    this.authService.fazerLogin(this.usuario);
+    this.presentToast('Seja bem vindo', 'success');
+    // if(this.email === 'admin@gmail.com' && this.senha === 'admin'){
+    //   this.router.navigateByUrl('/register');
+    //   this.presentToast('Seja bem vindo', 'success');
+    // } else {
+    //   this.presentToast('Usuário e senha incorretos', 'danger');
+    // }
   }
   async presentToast(text: string, cor: string){
     const toast = await this.toastController.create({
