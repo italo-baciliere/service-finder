@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth-guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'profile',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -21,11 +22,13 @@ const routes: Routes = [
   },
   {
     path: 'customer-professional',
-    loadChildren: () => import('./customer-professional/customer-professional.module').then( m => m.CustomerProfessionalPageModule)
+    loadChildren: () => import('./customer-professional/customer-professional.module').then( m => m.CustomerProfessionalPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule),
+    canActivate: [AuthGuard]
   },
 
 

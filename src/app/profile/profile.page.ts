@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
+  profile: string[];
+
   constructor() { }
 
   ngOnInit() {
   }
-
+ 
+  handleChange(event) {
+    console.log(event.target.value)
+    this.profile.push(event.target.value)
+  }
 }

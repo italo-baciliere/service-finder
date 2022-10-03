@@ -17,8 +17,8 @@ export class LoginPage implements OnInit {
   usuario: Usuario = new Usuario();
 
   constructor(private toastController: ToastController, private router: Router, private authService: AuthService) {
-    // this.email =  'admin@gmail.com';
-    // this.senha = 'admin';
+    this.usuario.email =  'admin@gmail.com';
+    this.usuario.senha = 'admin';
   }
 
   ngOnInit() {}
