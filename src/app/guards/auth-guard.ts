@@ -13,13 +13,13 @@ export class AuthGuard implements CanActivate{
     private router: Router
   ){ }
   canActivate(
-    route: ActivatedRouteSnapshot, 
+    route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     if(this.authService.UsuarioAuthenticado())
       return true;
 
     this.router.navigateByUrl('/home');
-    return false;    
+    return false;
   }
 }

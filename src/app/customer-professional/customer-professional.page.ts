@@ -9,16 +9,17 @@ import { IProfessional } from '../models/IProfessional.model';
 export class CustomerProfessionalPage implements OnInit {
 
   titulo = 'Vídeos App';
+  title = 'Título';
 
-  listProfessionals: IProfessional[] = [
-    {
-      photo: 'https://ionicframework.com/docs/demos/api/thumbnail/thumbnail.svg',
-      nome: 'Ronaldo Matos',
-      category: ['Marceneiro', 'Pintor', 'Encanador'],
-      distance: 2.5,
-      score: '5.0',
-    }
-  ];
+  // listProfessionals: IProfessional[] = [
+  //   {
+  //     photo: 'https://ionicframework.com/docs/demos/api/thumbnail/thumbnail.svg',
+  //     nome: 'Ronaldo Matos',
+  //     category: ['Marceneiro', 'Pintor', 'Encanador'],
+  //     distance: 2.5,
+  //     score: '5.0',
+  //   }
+  // ];
 
   constructor() { }
 

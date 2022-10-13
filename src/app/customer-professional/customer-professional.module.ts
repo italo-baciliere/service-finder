@@ -13,8 +13,10 @@ import { CustomerProfessionalPage } from './customer-professional.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CustomerProfessionalPageRoutingModule
+    CustomerProfessionalPageRoutingModule,
   ],
-  declarations: [CustomerProfessionalPage]
+  declarations: [
+    CustomerProfessionalPage,
+    ]
 })
 export class CustomerProfessionalPageModule {}

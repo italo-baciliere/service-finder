@@ -1,11 +1,10 @@
 <ion-header collapse="fade">
   <ion-toolbar>
     <div class="menu">
-      <img class="logo" src="../assets/img/logo-service-finder.png"> 
+      <img class="logo" src="../assets/img/logo-service-finder.png">
     </div>
     <ion-title></ion-title>
   </ion-toolbar>
-
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,7 +12,7 @@
   <div class="border">
 
     <div class="centerImage">
-      <img class="image" src="../assets/img/menu-imagem1.png"> 
+      <img class="image" src="../assets/img/menu-imagem1.png">
     </div>
 
     <ion-label class="topics" >
@@ -24,51 +23,53 @@
 
         <ion-label class="borderText">Busque o que precisa:</ion-label>
 
-        <ion-item lines="none">         
+        <ion-item lines="none">
           <ion-select placeholder="Categoria">
             <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
             <ion-select-option value="eletricista">Eletricista</ion-select-option>
             <ion-select-option value="encanador">Encanador</ion-select-option>
           </ion-select>
         </ion-item>
-        
+
         <ion-label class="borderText">Onde quiser:</ion-label>
-        
-        <ion-item  lines="none">
-          <ion-range></ion-range>
+        <ion-item>
+          <ion-range [pinFormatter]="pinFormatter" min="1" max="20" color="secondary" pin="true" step="2" [snaps]="true" [ticks]="false" (ionChange)="rangeChange($event)" [value]="9">
+            <!-- <ion-label slot="start">1 Km</ion-label>
+            <ion-label slot="end">20 Km</ion-label> -->
+          </ion-range>
         </ion-item>
 
         <div style="text-align:center" >
-          <ion-button class="searchButton" > Buscar</ion-button>
+          <ion-button class="searchButton" (click)="searchProfessionalByDistance()"> Buscar</ion-button>
         </div>
-        
-      </ion-list>   
+
+      </ion-list>
   </div>
-  
+
   <div class="border backgroundGray">
 
     <div class="centerImage">
-      <img class="image" src="../assets/img/menu-imagem2.png"> 
+      <img class="image" src="../assets/img/menu-imagem2.png">
     </div>
-  
+
     <ion-label class="topics" >
       Quer encontrar o melhor preço?
     </ion-label>
-  
+
       <ion-list class="borderList backgroundGray">
-  
+
         <ion-label class="borderText">Busque o que precisa:</ion-label>
-  
-        <ion-item class="backgroundGray" lines="none">         
+
+        <ion-item class="backgroundGray" lines="none">
           <ion-select placeholder="Categoria">
             <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
             <ion-select-option value="eletricista">Eletricista</ion-select-option>
             <ion-select-option value="encanador">Encanador</ion-select-option>
           </ion-select>
         </ion-item>
-        
+
         <ion-label class="borderText">Onde quiser:</ion-label>
-        
+
         <ion-item  lines="none">
           <ion-range></ion-range>
         </ion-item>
@@ -76,17 +77,17 @@
         <div style="text-align:center" >
           <ion-button class="requestBudgetButton"> Pedir orçamento</ion-button>
         </div>
-  
-      </ion-list>   
+
+      </ion-list>
 
   </div>
 
   <div class="border">
 
     <div class="centerImage">
-      <img class="image" src="../assets/img/menu-imagem3.png"> 
+      <img class="image" src="../assets/img/menu-imagem3.png">
     </div>
-  
+
     <ion-label class="topics" >
       Procurando trabalho ?
     </ion-label>
@@ -94,12 +95,12 @@
     <ion-label>
         <p>Encontre pessoas que precisam de suas habilidades:</p>
     </ion-label>
-  
+
       <ion-list class="borderList">
-  
+
         <ion-label class="borderText">Você faz:</ion-label>
-  
-        <ion-item lines="none">         
+
+        <ion-item lines="none">
           <ion-select placeholder="Categoria">
             <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
             <ion-select-option value="eletricista">Eletricista</ion-select-option>
@@ -110,9 +111,9 @@
         <div style="text-align:center" >
           <ion-button class="searchButton"> Buscar</ion-button>
         </div>
-  
-      </ion-list>   
+
+      </ion-list>
 
   </div>
-  
+
 </ion-content>
