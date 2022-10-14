@@ -33,14 +33,15 @@
 
         <ion-label class="borderText">Onde quiser:</ion-label>
         <ion-item>
-          <ion-range [pinFormatter]="pinFormatter" min="1" max="20" color="secondary" pin="true" step="2" [snaps]="true" [ticks]="false" (ionChange)="rangeChange($event)" [value]="9">
-            <!-- <ion-label slot="start">1 Km</ion-label>
-            <ion-label slot="end">20 Km</ion-label> -->
+          <ion-range [pinFormatter]="pinFormatter" min="1" max="20"
+          color="secondary" pin="true" step="2" [snaps]="true"
+          [ticks]="false" [(ngModel)]="distanceSearch">
           </ion-range>
         </ion-item>
 
         <div style="text-align:center" >
           <ion-button class="searchButton" (click)="searchProfessionalByDistance()"> Buscar</ion-button>
+          <router-outlet></router-outlet>
         </div>
 
       </ion-list>

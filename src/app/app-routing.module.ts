@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'customer-professional',
+    path: 'customer-professional/:longitude',
     loadChildren: () => import('./customer-professional/customer-professional.module').then( m => m.CustomerProfessionalPageModule),
     canActivate: [AuthGuard]
   },

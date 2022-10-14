@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { IProfessional } from '../../models/IProfessional.model';
 
-@Injectable({
-  providedIn: 'root'
+@Injectable({ // pode ser criado uma instancia deste objeto em outras classes
+  providedIn: 'root'  //
 })
 export class ProfessionalsService {
 
@@ -11,19 +11,37 @@ export class ProfessionalsService {
   constructor() {
     this.listProfessionals = [
       {
-        photo: 'https://ionicframework.com/docs/demos/api/thumbnail/thumbnail.svg',
+        photo: 'https://thispersondoesnotexist.com/image',
         nome: 'Ronaldo Matos',
         category: ['Marceneiro', 'Pintor', 'Encanador'],
         distance: 2.5,
         score: '5.0',
-      }];
+      },
+      {
+        photo: 'https://thispersondoesnotexist.com/image',
+        nome: 'Ronaldo Matos',
+        category: ['Marceneiro', 'Pintor', 'Encanador'],
+        distance: 2.5,
+        score: '5.0',
+      },
+      {
+        photo: 'https://thispersondoesnotexist.com/image',
+        nome: 'Ronaldo Matos',
+        category: ['Marceneiro', 'Pintor', 'Encanador'],
+        distance: 2.5,
+        score: '5.0',
+      }
+    ];
+  }
+
+  public getAll(): Array<IProfessional>{
+    return this.listProfessionals;
   }
 
   public searchProfessionalsNear(categoria: string, distance: number){
     console.log('Searching...');
 
     // let listResearch: number[] = [];
-
 
     // listResearch.push({2});
     // listResearchResult = this.listProfessionals.find(obj => obj.distance === distance);
