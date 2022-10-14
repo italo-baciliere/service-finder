@@ -35,7 +35,7 @@
         </ion-item>
 
         <ion-label > Atuais:</ion-label>
-          <ion-textarea placeholder="Profissões adicionadas..."></ion-textarea>        
+          <ion-textarea placeholder="  Profissões adicionadas..."></ion-textarea>        
       </div>
       
       <div class="borderText">
@@ -44,7 +44,7 @@
             <ion-row>
               <ion-col>
                 <p>Digite seu endereço: </p>
-                <ion-input type="address-line1" placeholder="  Digite seu endereço"></ion-input >        
+                <ion-input class="andress1"type="address-line1" placeholder="  Digite seu endereço"></ion-input >        
               </ion-col>
             </ion-row>
             <ion-row>
@@ -82,6 +82,14 @@
             
           </ion-grid>
           
+      </div>
+
+      <div style="text-align:center" >
+        <ion-button (click)="home()" class="registerButton"> Salvar</ion-button>
+      </div>
+
+      <div style="text-align:center" >
+        <ion-button (click)="login()" class="registerButton"> Cancelar</ion-button>
       </div>
       
     </div>

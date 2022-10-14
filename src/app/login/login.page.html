@@ -1,32 +1,48 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <div class="menu">
+      <img class="logo" src="../assets/img/logo-service-finder.png">
+    </div>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
 
-  <ion-header collapse="fade">
-    <ion-toolbar>
-      <ion-title>SERVICE FINDER</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="border">
+    
+    <div class="title">
+      <ion-label > Login </ion-label>
+    </div>
+    
+    <ion-list class="borderList">
 
-  <ion-card class="center" color="dark">
-    <ion-card-title class="ion-text-center">Login</ion-card-title>
+      <div class="inputForm">
+        <ion-label class="borderText">E-mail:</ion-label>
+      </div>
+      
+      <div class="inputForm">
+        <ion-input type="email" [(ngModel)]="usuario.email" placeholder="  Digite o seu email..." class="input"></ion-input>
+      </div>
+      
+      <div class="inputForm">      
+        <ion-label class="borderText">Senha:</ion-label>
+      </div>
+      
+      <div class="inputForm">
+        <ion-input type="password" [(ngModel)]="usuario.senha" class="input" placeholder="  Digite a senha..."></ion-input>
+      </div>
 
-    <ion-item  lines="none" color="dark">
-      <ion-label position="stacked">E-mail</ion-label>
-      <ion-input type="email" [(ngModel)]="usuario.email" class="input" placeholder="Digite o seu email..." value="admin@gmail.com"></ion-input>
-    </ion-item>
+      <div style="text-align:center" >
+        <ion-button (click)="login()" class="registerButton"> Entrar</ion-button>
+      </div>
 
-    <ion-item lines="none" color="dark">
-      <ion-label position="stacked">Senha</ion-label>
-      <ion-input type="password" [(ngModel)]="usuario.senha" class="input" placeholder="Digite a senha..." value="admin"></ion-input>
-    </ion-item>
+      <div style="text-align:center" >
+        <ion-button (click)="registrar()" class="registerButton"> Registrar</ion-button>
+      </div>
 
-    <ion-button color="light" fill="clear" expand="full" shape="round" size="small" class="botao ion-justify-content-center botao"
-              (click)="login()">
-      ENTRAR
-    </ion-button>
-    <ion-button color="light" fill="clear" expand="full" shape="round" size="small" class="botao ion-justify-content-center botao"
-              (click)="registrar()">
-      REGISTRAR
-    </ion-button>
-  </ion-card>
+    </ion-list>
+
+  </div>
 
 </ion-content>

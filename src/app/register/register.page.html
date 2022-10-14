@@ -1,22 +1,63 @@
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <div class="menu">
+      <img class="logo" src="../assets/img/logo-service-finder.png">
+    </div>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content [fullscreen]="true">
 
-  <ion-card class="center" color="dark">
-    <ion-card-title class="ion-text-center">Register</ion-card-title>
+  <div class="border">
+    
+    <div class="title">
+      <ion-label > Registro </ion-label>
+    </div>
+    
+    <ion-list class="borderList">
 
-    <ion-item  lines="none" color="dark">
-      <ion-label position="stacked">E-mail</ion-label>
-      <ion-input type="email" placeholder="Digite o seu email..." class="input"></ion-input>
-    </ion-item>
+      <div class="inputForm">
+        <ion-label class="borderText">Nome completo:</ion-label>
+      </div>
 
-    <ion-item lines="none" color="dark">
-      <ion-label position="stacked">Senha</ion-label>
-      <ion-input type="password" placeholder="Digite a senha..." class="input"></ion-input>
-    </ion-item>
+      <div class="inputForm">
+        <ion-input type="text" placeholder="  Digite seu nome..." class="input"></ion-input>
+      </div>
 
-    <ion-item lines="none" color="dark">
-      <ion-checkbox name="agreeTerms" slot="start" mode="ios"></ion-checkbox>
-      <ion-label class="ion-text-wrap">I agree to the terms and conditions</ion-label>
-    </ion-item>
-  </ion-card>
+      <div class="inputForm">
+        <ion-label class="borderText">E-mail:</ion-label>
+      </div>
+      
+      <div class="inputForm">
+        <ion-input type="email" placeholder="  Digite o seu email..." class="input"></ion-input>
+      </div>
+      
+      <div class="inputForm">      
+        <ion-label class="borderText">Senha:</ion-label>
+      </div>
+      
+      <div class="inputForm">
+        <ion-input type="password" placeholder="  Digite sua senha..." class="input"></ion-input>
+      </div>
 
+      <div class="inputForm">
+        <ion-checkbox name="agreeTerms" slot="start" mode="ios"></ion-checkbox>
+        <ion-label class="ion-text-wrap">Ao criar sua conta, você está aceitando nossos Termos e Políticas.</ion-label>
+      </div>
+      
+      
+      <div style="text-align:center" >
+        <ion-button (click)="profile()" class="registerButton"> Registrar</ion-button>
+      </div>
+
+      <div style="text-align:center" >
+        <ion-button (click)="login()" class="registerButton"> Cancelar</ion-button>
+      </div>
+
+    </ion-list>
+
+  </div>
+  
 </ion-content>
