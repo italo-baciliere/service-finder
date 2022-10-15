@@ -7,16 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { CustomerProfessionalPageRoutingModule } from './customer-professional-routing.module';
 
 import { CustomerProfessionalPage } from './customer-professional.page';
+import { HeaderModule } from '../header/header.component.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CustomerProfessionalPageRoutingModule,
+    HeaderModule,
+    CustomerProfessionalPageRoutingModule
   ],
   declarations: [
-    CustomerProfessionalPage,
+    CustomerProfessionalPage
     ]
 })
 export class CustomerProfessionalPageModule {}

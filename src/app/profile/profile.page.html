@@ -1,12 +1,4 @@
-<ion-header collapse="fade">
-  <ion-toolbar>
-    <div class="menu">
-      <img class="logo" src="../assets/img/logo-service-finder.png"> 
-    </div>
-    <ion-title></ion-title>
-  </ion-toolbar>
-
-</ion-header>
+<app-header></app-header>
 
 <ion-content>
 
@@ -16,9 +8,9 @@
 
       <div>
         <ion-item lines="none">
-          <img class="image" src="../assets/img/goku.jpg"> 
+          <img class="image" src="../assets/img/goku.jpg">
           <ion-input type="name" placeholder="  Digite seu nome"></ion-input >
-    
+
         </ion-item>
       </div>
 
@@ -26,8 +18,8 @@
         <ion-label> Digite seu endereço:</ion-label>
 
         <ion-item lines="none">
-         
-          <ion-select placeholder="Categoria" (change)="handleChange(event)" >
+
+          <ion-select placeholder="Categoria" (change)="handleChange($event)" >
            <ion-select-option value="marceneiro">Marceneiro</ion-select-option>
            <ion-select-option value="eletricista">Eletricista</ion-select-option>
            <ion-select-option value="encanador">Encanador</ion-select-option>
@@ -35,53 +27,53 @@
         </ion-item>
 
         <ion-label > Atuais:</ion-label>
-          <ion-textarea placeholder="  Profissões adicionadas..."></ion-textarea>        
+          <ion-textarea placeholder="  Profissões adicionadas..."></ion-textarea>
       </div>
-      
+
       <div class="borderText">
-        
+
           <ion-grid>
             <ion-row>
               <ion-col>
                 <p>Digite seu endereço: </p>
-                <ion-input class="andress1"type="address-line1" placeholder="  Digite seu endereço"></ion-input >        
+                <ion-input class="andress1"type="address-line1" placeholder="  Digite seu endereço"></ion-input >
               </ion-col>
             </ion-row>
             <ion-row>
               <ion-col>
                 <p> Complemento:</p>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
               </ion-col>
               <ion-col>
                 <p>Cidade:</p>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
 
               </ion-col>
               <ion-col>
                 <p>Estado:</p>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
               </ion-col>
 
             </ion-row>
-          
+
             <!--
               <ion-row>
               <ion-col>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
 
               </ion-col>
               <ion-col>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
               </ion-col>
               <ion-col>
-                <ion-input class="andress" type="name" ></ion-input > 
+                <ion-input class="andress" type="name" ></ion-input >
 
               </ion-col>
             </ion-row>
             -->
-            
+
           </ion-grid>
-          
+
       </div>
 
       <div style="text-align:center" >
@@ -91,10 +83,10 @@
       <div style="text-align:center" >
         <ion-button (click)="login()" class="registerButton"> Cancelar</ion-button>
       </div>
-      
+
     </div>
 
-    
+
 
   </ion-list>
 

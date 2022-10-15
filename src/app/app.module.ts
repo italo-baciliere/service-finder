@@ -8,19 +8,17 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AuthService } from './login/auth.service';
 import { CommonModule } from '@angular/common';
-import { ServiceHeaderModule } from './service-header/service-header.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     CommonModule,
-    ServiceHeaderModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

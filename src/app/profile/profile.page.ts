@@ -13,9 +13,13 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
   }
- 
+
   handleChange(event) {
-    console.log(event.target.value)
-    this.profile.push(event.target.value)
+    console.log(event.target.value);
+    this.profile.push(event.target.value);
   }
+
+  login(){}
+
+  home(){}
 }

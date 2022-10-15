@@ -1,11 +1,4 @@
-<ion-header collapse="fade">
-  <ion-toolbar>
-    <div class="menu">
-      <img class="logo" src="../assets/img/logo-service-finder.png">
-    </div>
-    <ion-title></ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
 <ion-content [fullscreen]="true">
 
@@ -34,8 +27,7 @@
         <ion-label class="borderText">Onde quiser:</ion-label>
         <ion-item>
           <ion-range [pinFormatter]="pinFormatter" min="1" max="20"
-          color="secondary" pin="true" step="2" [snaps]="true"
-          [ticks]="false" [(ngModel)]="distanceSearch">
+          pin="true" [(ngModel)]="distanceSearch">
           </ion-range>
         </ion-item>
 
@@ -67,12 +59,6 @@
             <ion-select-option value="eletricista">Eletricista</ion-select-option>
             <ion-select-option value="encanador">Encanador</ion-select-option>
           </ion-select>
-        </ion-item>
-        <ion-item>
-          <ion-range [pinFormatter]="pinFormatter" min="1" max="20"
-          color="secondary" pin="true" step="2" [snaps]="true"
-          [ticks]="false" [(ngModel)]="distanceSearch">
-          </ion-range>
         </ion-item>
 
         <ion-label class="borderText">Onde quiser:</ion-label>

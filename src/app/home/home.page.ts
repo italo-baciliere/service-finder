@@ -9,7 +9,7 @@ import { __param } from 'tslib';
 })
 export class HomePage {
 
-  distanceSearch = 9;
+  distanceSearch = 10;
 
   constructor(private router: Router) {}
 

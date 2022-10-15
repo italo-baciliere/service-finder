@@ -1,70 +1,60 @@
 
 #container {
     text-align: center;
-  
+
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
   }
-  
+
   #container strong {
     font-size: 20px;
     line-height: 26px;
   }
-  
+
   #container p {
     font-size: 16px;
     line-height: 22px;
-  
+
     color: #8c8c8c;
-  
+
     margin: 0;
   }
-  
+
   #container a {
     text-decoration: none;
   }
-  
-  .menu{
-    background-color: #F2EEE4;
-    height: 75px;
-    // background-color: var(--ion-color-tertiary); puxa do theme
-  }
-  
-  .logo{
-    height: 100px;
-  }
-  
+
   .image{
     height: 100px;
     margin-top: 10px;
     border-radius: 100%;
     padding: 10px 5px 0px 5px;
   }
-  
+
   .centerImage{
     text-align: center;
   }
-  
+
   .topics{
     font-weight: bold;
   }
-  
+
   .border{
     padding: 10px 15px 10px 15px;
   }
-  
+
   .borderText{
     padding: 20px 15px 10px 15px;
     font-size: 15px;
   }
-  
+
   .borderList{
     padding: 10px 15px 10px 15px;
   }
-  
+
   ion-select{
     border-radius: 30px;
     border-style: solid;
@@ -104,11 +94,11 @@
     padding-left: 10px;
     padding-top:5px;
   }
-  
+
   ion-range{
     width: 310px;
   }
-  
+
   .searchButton{
     border-radius: 30px;
     border-style: solid;
@@ -120,7 +110,7 @@
     --ion-color-primary-contrast: #5065A8 !important;
     --ion-color-primary-tint: #b7c0df !important;
   }
-  
+
   .requestBudgetButton{
     border-radius: 30px;
     border-style: solid;
@@ -132,11 +122,11 @@
     --ion-color-primary-contrast: #5065A8 !important;
     --ion-color-primary-tint: #b7c0df !important;
   }
-  
+
   .backgroundGray{
     background-color: #F2EEE4;
   }
-  
+
   p{
     font-size: 13px;
   }
@@ -172,4 +162,3 @@
     --ion-color-primary-contrast: #5065A8 !important;
     --ion-color-primary-tint: #b7c0df !important;
   }
-  
