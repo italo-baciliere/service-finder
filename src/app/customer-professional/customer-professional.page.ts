@@ -10,18 +10,13 @@ import { ProfessionalsService } from '../services/professionals/professionals.se
 })
 export class CustomerProfessionalPage implements OnInit {
 
-  // titulo = 'Vídeos App';
-  // title = 'Título';
-
   // ao carregar o componente, trazer a lista de profissionais que se enquadram na distancia e categoria.
   // utilizar o serviço para retornar os dados. a principio, puxar os dados de todos os profissionais e exibir
   // caso não seja retornado nenhum usuário, utilizar o template default
   listProfessionals: IProfessional[];
-  professionalService: ProfessionalsService;
+  // professionalService: ProfessionalsService;
 
-  constructor(private route: ActivatedRoute) {
-    this.professionalService = new ProfessionalsService();
-    this.listProfessionals = this.professionalService.getAll();
+  constructor(private route: ActivatedRoute, private professionalsService: ProfessionalsService) {
     this.route.params.subscribe(res => console.log(res.longitude)); // parametro passado pela rota
   }
 
@@ -29,6 +24,10 @@ export class CustomerProfessionalPage implements OnInit {
   // adicionar a propriedade longitute e latitute no profissional e no cliente.
 
   ngOnInit() {
+    this.professionalsService.todas().subscribe((professionals: IProfessional[]) => {
+      console.table(professionals);
+      this.listProfessionals = professionals;
+    });
   }
 
 }

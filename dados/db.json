@@ -18,5 +18,28 @@
       "destino": "1214-1",
       "data": "2020-11-05T21:14:10.710Z"
     }
+  ],
+  "professionals": [
+    {
+      "photo": "https://thispersondoesnotexist.com/image",
+      "nome": "Ronaldo Matos",
+      "category": ["Marceneiro", "Pintor", "Encanador"],
+      "distance": 2.5,
+      "score": "5.0"
+    },
+    {
+      "photo": "https://thispersondoesnotexist.com/image",
+      "nome": "Ronaldo Matos",
+      "category": ["Marceneiro", "Pintor", "Encanador"],
+      "distance": 2.5,
+      "score": "5.0"
+    },
+    {
+      "photo": "https://thispersondoesnotexist.com/image",
+      "nome": "Ronaldo Matos",
+      "category": ["Marceneiro", "Pintor", "Encanador"],
+      "distance": 2.5,
+      "score": "5.0"
+    }
   ]
 }

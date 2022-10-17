@@ -8,6 +8,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AuthService } from './login/auth.service';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     IonicModule.forRoot(),
     AppRoutingModule,
     CommonModule,
+    HttpClientModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
