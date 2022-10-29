@@ -1,0 +1,58 @@
+<div class="title">
+  <ion-label > Login </ion-label>
+</div>
+
+<form  [formGroup]="loginForm">
+  <div class="border">
+      <ion-list class="borderList">
+
+        <!-- EMAIL -->
+        <div class="inputForm">
+          <ion-label class="borderText">E-mail:</ion-label>
+        </div>
+        <div class="inputForm">
+          <ion-input type="email"
+            formControlName="userName"
+            placeholder="  Digite o seu email..."
+            class="input">
+          </ion-input>
+          <small *ngIf="loginForm.get('userName').errors?.required"> <!-- safe navigation operator (?) -->
+            User name is required!
+          </small>
+        </div>
+
+        <!-- SENHA -->
+        <div class="inputForm">
+          <ion-label class="borderText">Senha:</ion-label>
+        </div>
+        <div class="inputForm">
+          <ion-input type="password"
+            formControlName="password"
+            class="input" placeholder="
+            Digite a senha...">
+          </ion-input>
+          <small *ngIf="loginForm.get('password').errors?.required">
+            Password name is required!
+          </small>
+        </div>
+
+        <!-- BOTÕES -->
+        <div style="text-align:center" >
+          <ion-button
+            [disabled]="loginForm.invalid"
+            (click)="login()"
+            class="registerButton">
+            Entrar
+          </ion-button>
+        </div>
+        <div style="text-align:center" >
+          <ion-button (click)="registrar()"
+            class="registerButton">
+            Registrar
+          </ion-button>
+        </div>
+
+      </ion-list>
+  </div>
+</form>
+<p>Not a user?<a>Register now</a></p>

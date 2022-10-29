@@ -2,40 +2,6 @@
 
 <ion-content [fullscreen]="true">
 
-  <div class="border">
-
-    <div class="title">
-      <ion-label > Login </ion-label>
-    </div>
-
-    <ion-list class="borderList">
-
-      <div class="inputForm">
-        <ion-label class="borderText">E-mail:</ion-label>
-      </div>
-
-      <div class="inputForm">
-        <ion-input type="email" [(ngModel)]="usuario.email" placeholder="  Digite o seu email..." class="input"></ion-input>
-      </div>
-
-      <div class="inputForm">
-        <ion-label class="borderText">Senha:</ion-label>
-      </div>
-
-      <div class="inputForm">
-        <ion-input type="password" [(ngModel)]="usuario.senha" class="input" placeholder="  Digite a senha..."></ion-input>
-      </div>
-
-      <div style="text-align:center" >
-        <ion-button (click)="login()" class="registerButton"> Entrar</ion-button>
-      </div>
-
-      <div style="text-align:center" >
-        <ion-button (click)="registrar()" class="registerButton"> Registrar</ion-button>
-      </div>
-
-    </ion-list>
-
-  </div>
+  <app-sign-in></app-sign-in>
 
 </ion-content>
