@@ -16,9 +16,10 @@
             placeholder="  Digite o seu email..."
             class="input">
           </ion-input>
-          <small *ngIf="loginForm.get('userName').errors?.required"> <!-- safe navigation operator (?) -->
-            User name is required!
-          </small>
+          <app-vmessage
+            message="User name is required!"
+            *ngIf="loginForm.get('userName').errors?.required"> <!-- safe navigation operator (?) -->
+          </app-vmessage>
         </div>
 
         <!-- SENHA -->
@@ -31,9 +32,10 @@
             class="input" placeholder="
             Digite a senha...">
           </ion-input>
-          <small *ngIf="loginForm.get('password').errors?.required">
-            Password name is required!
-          </small>
+          <app-vmessage
+            message="Password name is required!"
+            *ngIf="loginForm.get('password').errors?.required">
+          </app-vmessage>
         </div>
 
         <!-- BOTÕES -->
