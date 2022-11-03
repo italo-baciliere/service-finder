@@ -19,14 +19,33 @@ export class SignInComponent implements OnInit{
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      userName: ['', Validators.required], // admin@gmail.com     // tmp@2022
-      password: ['', Validators.required] // admin                //  italo@fmchtt.dev.br
+      userName: ['italo@fmchtt.dev.br', Validators.required],  // admin@gmail.com   // italo@fmchtt.dev.br
+      password: ['tmp@2022', Validators.required]              // admin             // tmp@2022
     });
   }
 
-  registrar(){}
-
   login(){
-    this.authService.fazerLogin({userName:this.loginForm.get('userName').value,password:this.loginForm.get('password').value});
+    console.log('Vai se autenticar');
+
+    const userName = this.loginForm.get('userName').value;
+    const password = this.loginForm.get('password').value;
+
+    // this.authService
+    //   .authenticate(userName, password)
+    //   .subscribe(
+    //     () => console.log('authenticado'),
+    //     err => {
+    //       console.log(err);
+    //       this.loginForm.reset();
+    //     }
+    //   );
+
+    this.authService.fazerLogin({userName,password});
+
+
+  }
+
+  registrar() {
+    throw new Error('Method not implemented.');
   }
 }

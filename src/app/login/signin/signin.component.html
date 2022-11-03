@@ -2,7 +2,7 @@
   <ion-label > Login </ion-label>
 </div>
 
-<form  [formGroup]="loginForm">
+<form  [formGroup]="loginForm" (submit)="login()">
   <div class="border">
       <ion-list class="borderList">
 
@@ -48,6 +48,7 @@
           </ion-button>
         </div>
         <div style="text-align:center" >
+          <!-- <ion-button> -->
           <ion-button (click)="registrar()"
             class="registerButton">
             Registrar
