@@ -1,7 +1,9 @@
 <ion-header collapse="fade">
   <ion-toolbar>
     <div class="menu">
-      <img class="logo" src="../assets/img/logo-service-finder.png">
+      <img class="logo" src="../assets/img/logo-service-finder.png" />
     </div>
   </ion-toolbar>
+  <a (click)="goToHome()" ng-if="authenticated">Home</a>
+  <a (click)="goToProfile()" ng-if="authenticated">Perfil</a>
 </ion-header>

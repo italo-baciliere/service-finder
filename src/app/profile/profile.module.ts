@@ -15,8 +15,8 @@ import { HeaderModule } from '../header/header.component.module';
     FormsModule,
     IonicModule,
     ProfilePageRoutingModule,
-    HeaderModule
+    HeaderModule,
   ],
-  declarations: [ProfilePage]
+  declarations: [ProfilePage],
 })
 export class ProfilePageModule {}

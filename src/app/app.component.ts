@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from './login/auth.service';
 
 @Component({
@@ -6,15 +6,12 @@ import { AuthService } from './login/auth.service';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit {
   mostrarMenu = false;
 
   constructor(private authService: AuthService) {}
 
-  /*ngOnInit(){
-    this.authService.mostrarMenuEmitter.subscribe(
-      mostrar => this.mostrarMenu = mostrar
-    );
-  }*/
+  ngOnInit() {
+    this.authService.verifyTokens();
+  }
 }

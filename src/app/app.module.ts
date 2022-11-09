@@ -5,32 +5,25 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
-import { AuthService } from './login/auth.service';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { HomePageModule } from './home/home.module';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './http/http-interceptor';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    CommonModule,
     HttpClientModule,
-    HomePageModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    AuthService
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [
-    AppComponent
-  ],
+  bootstrap: [AppComponent],
 })
-
 export class AppModule {}
