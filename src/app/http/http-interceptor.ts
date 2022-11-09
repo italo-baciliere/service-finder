@@ -13,9 +13,7 @@ export class AuthInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     // Get the auth token from the service.
     const authToken = this.auth.accessToken;
-    console.log('aqui 0');
     if (authToken) {
-      console.log('aqui 1');
       // Clone the request and replace the original headers with
       // cloned headers, updated with the authorization.
       const authReq = req.clone({

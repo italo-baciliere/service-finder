@@ -10,7 +10,7 @@ import { IAddress } from '../models/IAddress.model';
 export class ProfilePage implements OnInit {
   url = 'http://localhost:8000/';
   profile: string[];
-  address: IAddress;
+  address: IAddress = {} as IAddress;
 
   constructor(private http: HttpClient) {}
 
@@ -24,6 +24,14 @@ export class ProfilePage implements OnInit {
       .toPromise();
 
     this.address = address;
+  }
+
+  async updateAddress() {
+    const res = await this.http
+      .patch<IAddress>(this.url + 'api/address', this.address)
+      .toPromise();
+
+    this.address = res;
   }
 
   handleChange(event) {

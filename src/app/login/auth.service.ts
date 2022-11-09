@@ -21,31 +21,38 @@ export class AuthService {
 
   verifyTokens() {
     this.loading = true;
-    this.http
-      .post(url + 'api/verify', { token: localStorage.getItem('access') })
-      .subscribe(
-        (data) => {
-          this.accessToken = localStorage.getItem('access');
-          this.refreshToken = localStorage.getItem('refresh');
-          this.loading = false;
-        },
-        () => {
-          this.http
-            .post<{ access: string }>(url + 'api/refresh', {
-              refresh: localStorage.getItem('refresh'),
-            })
-            .subscribe(
-              (res) => {
-                this.accessToken = res.access;
-                this.refreshToken = localStorage.getItem('refresh');
-                this.loading = false;
-              },
-              (e) => {
-                console.log(e);
-              }
-            );
-        }
-      );
+    if (this.accessToken) {
+      this.http
+        .post(url + 'api/verify', { token: localStorage.getItem('access') })
+        .subscribe(
+          (data) => {
+            this.accessToken = localStorage.getItem('access');
+            this.refreshToken = localStorage.getItem('refresh');
+            this.loading = false;
+          },
+          () => {
+            this.http
+              .post<{ access: string }>(url + 'api/refresh', {
+                refresh: localStorage.getItem('refresh'),
+              })
+              .subscribe(
+                (res) => {
+                  this.accessToken = res.access;
+                  this.refreshToken = localStorage.getItem('refresh');
+                  this.loading = false;
+                },
+                (e) => {
+                  console.log(e);
+                  localStorage.removeItem('access');
+                  localStorage.removeItem('refresh');
+
+                  this.accessToken = null;
+                  this.refreshToken = null;
+                }
+              );
+          }
+        );
+    }
   }
 
   authenticate(userName: string, password: string) {
